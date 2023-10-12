@@ -1,0 +1,66 @@
+import time
+
+array = []
+for i in range(10):
+  time.sleep(1)
+  element = time.ctime(time.time())
+  array.append(element)
+  
+print(f"1>>{array[0]}")
+print(f"{len(array)-1}>>{array[len(array)-1]}")
+----------------------------------------------------
+
+array = []
+
+for i in range(10):
+  array.append(i)
+print(array)
+
+count = 1
+sdvig = -1
+for i in range(len(array)-1):
+  if count ==3:
+    array.pop(count+sdvig)
+    count = 0
+    sdvig += 2
+  count +=1
+print(array)
+----------------------------------------------
+
+array = []
+
+for i in range(10):
+  array.append(i)
+print(array)
+print(array[::2])
+---------------------------------------------
+
+a = int(input(f"До какого элемента вы хотите увидеть список? "))
+
+array = []
+
+for i in range(10):
+  array.append(i)
+
+if a >= 10:
+  print(f"Такого индекса нет")
+else:
+  print(array[:a])
+-----------------------------------------------
+
+import random
+
+
+day = int(input("За какой день получить среднесуточную температуру? "))
+
+
+weatherArray = []
+
+for i in range(62): weatherArray.append(random.randint(23,35))
+
+if day > 62:
+  print("Увы так далеко мы не знаем :( ")
+else:
+  print (weatherArray[day])
+
+--------------------------------------------

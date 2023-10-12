@@ -1,0 +1,96 @@
+for i in range(10):
+  print(i)
+
+
+i = 0
+while i < 10:
+  print(i)
+  i+=1
+
+-------------------------
+
+array = ['hello', 1]
+for i in range(len(array)):
+  print(array[i])
+
+i = 0
+while i <= len(array) -1:
+  print(array[i])
+  i+=1
+
+--------------------------
+
+swaped = False
+array = [3,6,1,3,9,6,3,55,7,54,3,4,567]
+swaps = 0
+for i in range(len(array)):
+  for z in range(len(array)-1):
+    if array[z] > array[z+1]:
+      temp1 = array[z]
+      temp2 = array[z+1]
+      array[z+1] = temp1
+      array[z] = temp2
+      swaped = True
+      swaps+=1
+  if swaped:
+    swaped = False
+  else:
+    break
+print(array, swaps)
+
+----------------------
+
+numm = int(input('количество чисел '))
+summ = 0
+
+for i in range(numm):
+  numm = int(input('введите число'))
+  summ += numm
+print(summ/numm)
+
+------------------------------
+
+
+numm = int(input('Введите число: '))
+summ = int(input('В какую степень возвести?: ')) 
+res = 1
+
+for i in range(summ):
+  res = res * numm
+print('Ответ: ', res)
+
+
+1*3
+3*3
+9*3
+
+-------------------------------
+
+array =[]
+for i in range(-100, 100,4):
+  array.append(i)
+print(array)
+
+------------------------------
+
+array =[]
+for i in range(-100, 100,4):
+  array.append(i)
+array.insert(int(len(array)/2), 'Середина')  #добавили по индексу
+word = array.pop(int(len(array)/2))  #Убрали по индексу
+array.append(word)   #Вернули в конец
+print(array)
+
+----------------------------------
+
+array =[]
+for i in range(-100, 100,4):
+  array.append(i)
+array.insert(int(len(array)/2), 'Середина')  #добавили по индексу
+word = array.pop(int(len(array)/2))  #Убрали по индексу (прячет)
+word = array.remove(word)  #Удаляет полностью
+array.append(word)   #Вернули в конец
+array_c = array.copy()  #Копирует список в список
+print(array)
+print(array_c)
+-----------------------------------------------

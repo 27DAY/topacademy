@@ -1,0 +1,44 @@
+# import random
+
+# password = input('Введите пароль\n ').strip().lower()
+# gen_capcha = random.randint(1000,9999)
+# capcha = int(input(f'введите капчу {gen_capcha}\n '))
+# secretword = 'пароль'
+# if password == secretword and gen_capcha == capcha:
+#  print('Успешно')
+# else:
+# print('Неуспешно')
+
+
+
+# one_two = int(input('Введите 1 для площади круга или 2 для площади квадрата \n'))
+# if one_two == 1:
+#   print('Успешно')
+# elif one_two == 2:
+#   print('Неуспешно')
+
+
+# number_all = int(input('Сколько чисел вы введете? '))
+# summ = 0
+# count = 0
+
+# while count < number_all:
+#   number = int(input('Введите число: '))
+#   summ += number
+#   count += 1
+
+# print('Среднее арифметическое число ', summ/number_all)
+
+
+
+
+summ = 4
+count = 0
+maxNum = 0
+
+while count < summ:
+  number = int(input('Введите число: '))
+  if maxNum < number:
+    maxNum = number
+  count += 1
+print(f"{maxNum}")
